@@ -1,0 +1,88 @@
+@use '../main/mixin' as *;
+
+
+.benefits {
+    margin-top: 120px;
+    &_title {
+        @include t700;
+        font-size: 40px;
+        position: relative;
+        z-index: 101;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            left: 10%;
+            bottom: 10%;
+            height: 40%;
+            background: #c7ffee;
+            z-index: -1;
+        }
+    }
+    &_wrapper {
+        margin-top: 90px;
+        display: grid;
+        gap: 0px;
+    }
+    &_photo {
+        border-radius: 32px;
+        height: 270px;
+        position: relative;
+        border-radius: 30px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &_main {
+        &_title {
+            @include t700;
+            font-size: 18px;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 60%;
+                left: 10%;
+                bottom: 24px;
+                height: 40%;
+                background: #c7ffee;
+                z-index: 1;
+                border-radius: 10px 0 10px 0
+            }
+        }
+        &_text {
+            margin-top: 12px;
+            @include t400;
+            font-size: 16px;
+        }
+    }
+    &_item {
+        margin-top: -50px;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 40px;
+        align-items: center;
+        padding: 20px;
+        border-radius: 30px;
+        background-color: #fff;
+        &:nth-child(2n) {
+            grid-template-columns: 1.5fr 1fr;
+            .benefits_photo {
+                grid-column: 2 / 3;
+            }
+            .benefits_main {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            .benefits_main_title::after {
+                width: 40%;
+                left: 20%;
+                bottom: -6px;
+            }
+        }
+    }
+
+}   

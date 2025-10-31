@@ -1,0 +1,36 @@
+.container {
+    margin: 0 auto;
+    width: 1240px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+}
+.rtext {
+  z-index: 101;
+  position: absolute;
+  top: 60%;
+  right: 40px;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #86a5be;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: top right;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg width='7' height='14' viewBox='0 0 7 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.96875 0V11.2031L0.6875 9.0156L0 9.7344L3.46094 13.0664L6.93755 9.7344L6.24995 9.0156L3.96875 11.1992V0H2.96875Z' fill='%2386A5BE'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    transform: rotate(-90deg);
+  }
+
+}

@@ -1,0 +1,48 @@
+@use '../main/mixin' as *;
+
+.title {
+    margin-top: 80px;
+    position: relative;
+    &_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+    &_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        margin: 100px 0 50px 0;
+    }
+    &_photo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        z-index: 100;
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &_h1 {
+        @include t400;
+        font-size: 40px;
+        line-height: 105%;
+    }
+    &_list {
+        list-style: disc;
+        list-style-position: inside;
+        margin-top: 34px;
+        &_item {
+            @include t700;
+            font-size: 22px;
+            margin-top: 8px;
+        }
+    }
+    &_button {
+        margin-top: 50px;
+        @include t700;
+        @include button;
+    }
+}

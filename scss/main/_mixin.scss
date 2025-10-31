@@ -1,0 +1,25 @@
+@mixin t400 {
+    font-weight: 400;
+    color: #444B54;
+
+}
+
+@mixin t700 {
+    font-weight: 700;
+    color: #444B54;
+}
+
+@mixin button {
+    display: inline-block;
+    border-radius: 42px;
+    background: #c7ffee;
+    font-size: 18px;
+    padding: 16px 55px;
+    color: #5f5f5f;
+    transition: all 0.2s ease;
+    &:hover {
+        transform: scale(1.05);
+        background-color: #444B54;
+        color: #c7ffee;
+    }
+}

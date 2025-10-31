@@ -1,0 +1,89 @@
+@use '../main/mixin' as *;
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-content: center;
+        padding: 22px 0;
+    }
+    &_main {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 50px;
+    }
+    &_logo {
+        height: 50px;
+        img {
+            object-fit: contain;
+        }
+    }
+    &_nav {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 0px 30px;
+        background-color: #F9F9F9;
+        border-radius: 20px;
+        &_item {
+            @include t400;
+            padding: 10px;
+            border-radius: 10px;
+            &:hover {
+                background-color: #444B54;
+                color: #c7ffee;
+            }
+        }
+
+    }
+    &_info {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        &_social {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 20px;
+            &_item {
+                background-color: white;
+                padding: 12px;
+                border-radius: 50px;
+                img {
+                    height: 20px;
+
+                }
+                &:hover {
+                    background-color: #c7ffee;
+                }
+            }
+        }
+        &_tel {
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: flex-start;
+            &_phone {
+                @include t700;
+                font-size: 18px;
+                padding: 5px;
+                border-radius: 10px;
+                width: auto;
+                &:hover {
+                    background-color: #444B54;
+                    color: #c7ffee;
+                }
+            }
+            &_time {
+                padding: 0 10px;
+                @include t400;
+                font-size: 14px;
+            }
+        }
+    }
+}
