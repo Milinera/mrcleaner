@@ -1,0 +1,38 @@
+@use '../main/mixin' as *;
+
+.news {
+    padding: 30px;
+    margin-top: 120px;
+    position: relative;
+    background: #fff;
+    &_title {
+        @include t700;
+        @include fz40;
+    }
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    &_item {
+        &_photo {
+            height: 260px;
+            object-fit: cover;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+
+        &_date {
+            margin-top: 30px;
+            @include t400;
+            font-size: 14px;
+        }
+        &_title {
+            margin-top: 8px;
+            @include t700;
+            font-size: 18px;
+        }
+    }
+}

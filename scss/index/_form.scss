@@ -1,0 +1,90 @@
+@use '../main/mixin' as *;
+
+.form {
+    margin-top: 120px;
+    position: relative;
+    &_wrapper {
+        padding: 30px;
+        background: #fff;
+        border-radius: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+    &_text {
+        &_h2 {
+            @include t700;
+            font-size: 36px;
+        }
+        &_h3 {
+            @include t400;
+            font-size: 16px;
+            margin-top: 35px;
+            span {
+                @include t700;
+            }
+        }
+    }
+    &_main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 10px 30px;
+        align-items: center;
+        &_input {
+            border: none;
+            grid-column: 2/3;
+            border-bottom: 1px solid #bec1c5;
+            @include t400;
+            font-size: 13px;
+            height: 36px;
+            color: #111;
+            &::placeholder {
+                color: #bec1c5;
+            }
+        }
+        &_box {
+            padding: 32px 14px;
+            border: 1px dashed #bec1c5;
+            border-radius: 18px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            grid-row: 1/4;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            img {
+                width: 22px;
+                height: 22px;
+            }
+            span {
+                font-size: 11px;
+                text-align: center;
+                @include t400;
+                color: #b5b5b5;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        &_submit {
+            border: none;
+            @include button;
+            text-align: center;
+            grid-column: 2/3;
+            padding: 12px;
+            margin-top: 20px;
+            &::placeholder {
+                color: #111;
+            }
+            &:hover {
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

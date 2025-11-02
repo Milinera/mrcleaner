@@ -3,9 +3,10 @@
 
 .benefits {
     margin-top: 120px;
+    position: relative;
     &_title {
         @include t700;
-        font-size: 40px;
+        @include fz40;
         position: relative;
         z-index: 101;
         &::after {
@@ -20,9 +21,11 @@
         }
     }
     &_wrapper {
-        margin-top: 90px;
+        margin-top: 40px;
         display: grid;
         gap: 0px;
+        border-radius: 30px;
+        overflow: hidden;
     }
     &_photo {
         border-radius: 32px;
@@ -39,14 +42,14 @@
     &_main {
         &_title {
             @include t700;
-            font-size: 18px;
+            font-size: 24px;
             position: relative;
             &::after {
                 content: '';
                 position: absolute;
                 width: 60%;
                 left: 10%;
-                bottom: 24px;
+                bottom: 30px;
                 height: 40%;
                 background: #c7ffee;
                 z-index: 1;
@@ -54,19 +57,17 @@
             }
         }
         &_text {
-            margin-top: 12px;
+            margin-top: 16px;
             @include t400;
-            font-size: 16px;
+            font-size: 20px;
         }
     }
     &_item {
-        margin-top: -50px;
         display: grid;
         grid-template-columns: 1fr 1.5fr;
         gap: 40px;
         align-items: center;
-        padding: 20px;
-        border-radius: 30px;
+        padding: 40px 60px;
         background-color: #fff;
         &:nth-child(2n) {
             grid-template-columns: 1.5fr 1fr;
@@ -80,7 +81,7 @@
             .benefits_main_title::after {
                 width: 40%;
                 left: 20%;
-                bottom: -6px;
+                bottom: -12px;
             }
         }
     }

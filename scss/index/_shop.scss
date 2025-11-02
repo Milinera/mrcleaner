@@ -5,7 +5,7 @@
     position: relative;
     &_title {
         @include t700;
-        font-size: 40px;
+        @include fz40;
     }
     &_container {
         background-color: #fff;

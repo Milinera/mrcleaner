@@ -27,7 +27,7 @@
     }
     &_h1 {
         @include t400;
-        font-size: 40px;
+        @include fz40;
         line-height: 105%;
     }
     &_list {
