@@ -53,4 +53,26 @@
             }
         }
     }
+    &_list {
+        margin-top: 60px;
+    }
+    &_more {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        margin-top: 60px;
+        padding: 14px;
+        border-radius: 18px;
+        background: #fff;
+        &_button {
+            @include button;
+        }
+        &_text {
+            @include t400;
+            font-size: 20px;
+        }
+
+    }
+
 }

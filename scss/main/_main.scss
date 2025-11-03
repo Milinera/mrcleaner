@@ -34,3 +34,26 @@ body {
   }
 
 }
+
+.nav {
+  margin-top: 120px;
+  &_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  &_item {
+    font-size: 16px;
+    font-weight: 400;
+    color: #bec1c5;
+    &::after {
+      content: ">";
+      margin-left: 15px;
+    }
+    &:last-child {
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
