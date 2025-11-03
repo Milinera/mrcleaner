@@ -4,6 +4,7 @@
 .benefits {
     margin-top: 120px;
     position: relative;
+    scroll-margin-top: 90px;
     &_title {
         @include t700;
         @include fz40;

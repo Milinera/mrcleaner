@@ -177,9 +177,7 @@ body {
 .header_info_tel {
   display: grid;
   grid-template-columns: 1fr;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-items: flex-start;
 }
 .header_info_tel_phone {
   font-weight: 700;
@@ -212,6 +210,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-items: center;
 }
 .footer_item_phone {
   font-weight: 700;
@@ -361,12 +360,13 @@ body {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #57ffcd;
-  color: #000000;
+  color: #fff;
 }
 
 .shop {
   margin-top: 60px;
   position: relative;
+  scroll-margin-top: 90px;
 }
 .shop_title {
   font-weight: 700;
@@ -383,6 +383,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 1fr;
   gap: 16px;
 }
 .shop_item {
@@ -397,6 +398,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .shop_item_title {
   grid-column: 1/3;
@@ -414,6 +417,11 @@ body {
   font-weight: 400;
   color: #444B54;
   font-size: 16px;
+}
+.shop_item:hover {
+  background-color: #f0f0f0;
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 .shop_item_button {
   grid-column: 1/2;
@@ -440,12 +448,13 @@ body {
   padding: 10px 20px;
   position: relative;
   z-index: 201;
+  font-weight: 700;
 }
 .shop_item_button_btn:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #57ffcd;
-  color: #000000;
+  color: #fff;
 }
 .shop_item_button_text {
   font-weight: 400;
@@ -500,10 +509,86 @@ body {
 .shop_item:nth-child(1) .shop_item_button_text {
   margin-bottom: 13px;
 }
+.shop_list1 {
+  margin-top: 120px;
+}
+.shop_list1 .shop_item:nth-child(1) {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.shop_list1 .shop_item:nth-child(1) .shop_item_maintitle {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  font-weight: 700;
+  color: #444B54;
+  font-size: 54px;
+  position: relative;
+  z-index: 101;
+}
+.shop_list1 .shop_item:nth-child(1) .shop_item_maintitle::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 10%;
+  height: 20%;
+  background: #c7ffee;
+  z-index: -1;
+}
+.shop_list1 .shop_item:nth-child(1) .shop_item_maindescr {
+  font-weight: 400;
+  color: #444B54;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  font-size: 28px;
+}
+.shop_list1 .shop_item:nth-child(2) {
+  grid-column: 3/5;
+  grid-row: 1/2;
+}
+.shop_list1 .shop_item:nth-child(4) {
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+.shop_list1 .shop_item:nth-child(8) {
+  grid-column: 3/5;
+  grid-row: 3/4;
+}
+.shop_list1 .shop_item:nth-child(8) .shop_item_maintitle {
+  grid-column: 1/4;
+  grid-row: 1/2;
+  font-weight: 700;
+  color: #444B54;
+  font-size: 54px;
+  position: relative;
+  z-index: 101;
+}
+.shop_list1 .shop_item:nth-child(8) .shop_item_maintitle::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 10%;
+  height: 20%;
+  background: #c7ffee;
+  z-index: -1;
+}
+.shop_list1 .shop_item:nth-child(8) .shop_item_maindescr {
+  font-weight: 400;
+  color: #444B54;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  font-size: 28px;
+}
+.shop_list1 .shop_item:nth-child(10) {
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
 
 .benefits {
   margin-top: 120px;
   position: relative;
+  scroll-margin-top: 90px;
 }
 .benefits_title {
   font-weight: 700;
@@ -594,6 +679,7 @@ body {
 .work {
   margin-top: 120px;
   position: relative;
+  scroll-margin-top: 90px;
 }
 .work_title {
   font-weight: 700;
@@ -654,6 +740,7 @@ body {
 }
 
 .form {
+  scroll-margin-top: 120px;
   margin-top: 120px;
   position: relative;
 }
@@ -773,7 +860,7 @@ body {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   background-color: #57ffcd;
-  color: #000000;
+  color: #fff;
 }
 .form_main_submit::-webkit-input-placeholder {
   color: #111;
@@ -807,6 +894,7 @@ body {
 }
 
 .news {
+  scroll-margin-top: 120px;
   padding: 30px;
   margin-top: 120px;
   position: relative;
@@ -849,6 +937,7 @@ body {
 .que {
   margin-top: 120px;
   position: relative;
+  scroll-margin-top: 120px;
 }
 .que_wrapper {
   display: grid;

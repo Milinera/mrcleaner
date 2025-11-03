@@ -1,6 +1,7 @@
 @use '../main/mixin' as *;
 
 .news {
+    scroll-margin-top: 120px;
     padding: 30px;
     margin-top: 120px;
     position: relative;

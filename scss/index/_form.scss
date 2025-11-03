@@ -1,6 +1,7 @@
 @use '../main/mixin' as *;
 
 .form {
+    scroll-margin-top: 120px;
     margin-top: 120px;
     position: relative;
     &_wrapper {

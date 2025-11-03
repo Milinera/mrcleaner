@@ -67,7 +67,7 @@
         &_tel {
             display: grid;
             grid-template-columns: 1fr;
-            justify-content: flex-start;
+            justify-items: flex-start;
             &_phone {
                 @include t700;
                 font-size: 18px;
