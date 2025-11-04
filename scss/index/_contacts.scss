@@ -1,0 +1,122 @@
+@use '../main/mixin' as *;
+
+.contacts {
+    margin-top: 60px;
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 40px;
+    }
+    &_text {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        &_title {
+            @include t700;
+            font-size: 36px;
+        }
+        &_descr {
+            @include t400;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        &_social {
+            margin-top: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            &_item {
+                background-color: white;
+                padding: 18px;
+                border-radius: 50px;
+                img {
+                    height: 30px;
+
+                }
+                &:hover {
+                    background-color: #c7ffee;
+                }
+            }
+        }
+        &_phone {
+            margin-top: 40px;
+            a {
+                @include t700;
+                font-size: 24px;
+            }
+        }
+    }
+    &_main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px 30px;
+        align-items: center;
+        padding: 40px;
+        border-radius: 30px;
+        background: #fff;
+        &_input {
+            border: none;
+            background: #f6f6f6;
+            border-radius: 30px;
+            padding: 26px;
+            @include t400;
+            font-size: 16px;
+            height: 36px;
+            color: #111;
+            &::placeholder {
+                color: #bec1c5;
+            }
+        }
+        &_box {
+            padding: 32px 14px;
+            border: 1px dashed #bec1c5;
+            border-radius: 18px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            img {
+                width: 22px;
+                height: 22px;
+            }
+            span {
+                font-size: 11px;
+                text-align: center;
+                @include t400;
+                color: #b5b5b5;
+            }
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        &_submit {
+            border: none;
+            @include button;
+            text-align: center;
+            padding: 12px;
+            margin-top: 20px;
+            &::placeholder {
+                color: #111;
+            }
+            &:hover {
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+        }
+        &_title {
+            @include t700;
+            font-size: 26px;
+        }
+        &_descr {
+            @include t400;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

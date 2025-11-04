@@ -71,16 +71,8 @@
             &_phone {
                 @include t700;
                 font-size: 18px;
-                padding: 5px;
-                border-radius: 10px;
-                width: auto;
-                &:hover {
-                    background-color: #e9e9e9;
-                    color: #000000;
-                }
             }
             &_time {
-                padding: 0 10px;
                 @include t400;
                 font-size: 14px;
             }
