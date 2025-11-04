@@ -1,0 +1,102 @@
+@use '../main/mixin' as *;
+
+.price {
+    margin-top: 60px;
+    scroll-margin-top: 100px;
+    position: relative;
+    &_title {
+        @include t700;
+        font-size: 18px;
+        padding: 0 40px;
+    }
+    &_wrapper {
+        margin-top: 20px;
+        border-radius: 30px;
+        background-color: #fff;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+    }
+    &_list {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        &_title {
+            @include t700;
+            font-size: 24px;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 101;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 60%;
+                left: 10%;
+                bottom: 10%;
+                height: 40%;
+                background: #c7ffee;
+                z-index: -1;
+            }
+        }
+        &_li {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #f0f2f6;
+            padding: 25px 0;
+            &_text {
+                @include t700;
+                font-size: 18px;
+            }
+            &_coast {
+                @include t700;
+                font-size: 18px;
+            }
+        }
+    }
+    &_seil {
+        border-radius: 30px;
+        padding: 10px 40px;
+        background-color: #f6f6f6;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        justify-items: center;
+        &_top {
+            @include t400;
+            font-size: 14px;
+        }
+        &_icon {
+            background-color: #c7ffee;
+            padding: 18px;
+            border-radius: 50px;
+            img {
+                height: 30px;
+
+            }
+        }
+        &_text {
+            @include t700;
+            text-align: center;
+            font-size: 30px;
+        }
+        &_list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-content: flex-start;
+            list-style-type: disc;
+            list-style-position: inside;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 16px;
+        }
+        &_button {
+            @include button;
+        }
+        &_more {
+            @include t400;
+            font-size: 14px;
+        }
+    }   
+}

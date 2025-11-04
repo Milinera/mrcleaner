@@ -1,0 +1,112 @@
+@use '../main/mixin' as *;
+
+.arc {
+    margin-top: 60px;
+    position: relative;
+    &_content {
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    &_pick {
+        border-radius: 30px;
+        background-color: #f6f6f6;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        &_title {
+            @include t400;
+            font-size: 31px;
+            color: #4e4e4e;
+            position: relative;
+            z-index: 101;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 60%;
+                left: 10%;
+                bottom: 10%;
+                height: 40%;
+                background: #c7ffee;
+                z-index: -1;
+            }
+        }
+        &_img {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img {
+                object-fit: contain;
+            }
+        }
+        &_buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            &_socials {
+                display: flex;
+                justify-content: flex-start;
+                gap: 20px;
+                &_item {
+                    background-color: white;
+                    padding: 12px;
+                    border-radius: 50px;
+                    img {
+                        height: 20px;
+
+                    }
+                    &:hover {
+                        background-color: #c7ffee;
+                    }
+                }
+            }
+            &_price {
+                background-color: white;
+                padding: 12px 46px 12px 26px;
+                border-radius: 50px;
+                @include t700;
+                font-size: 14px;
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 26px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                    border-top: 5px solid black; /* цвет стрелки */
+                    width: 0;
+                    height: 0;
+                }
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: #57ffcd;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &_text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        &_title {
+            @include t700;
+            font-size: 32px;
+            color: #4e4e4e;
+        }
+        &_descr {
+            @include t400;
+            font-size: 20px;
+            color: #4e4e4e;
+        }
+    }
+}
