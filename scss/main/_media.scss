@@ -1,3 +1,5 @@
+@use '../main/mixin' as *;
+
 @media (max-width: 1439px) {
     .container {
         margin: 0 auto;
@@ -219,4 +221,351 @@
             }
         }
     }
+}
+
+@media (max-width: 768px) {
+    .header {
+        background: #fff;
+        &_grid {
+            display: none;
+        }
+        &_mobile {
+            height: 50px;
+            display: block;
+            position: relative;
+            &_main {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                align-items: center;
+                height: 100%;
+                &_img {
+                    height: 40px;
+                    img {
+                        height: 100%;
+                    }
+                }
+                &_burger {
+                    width: 30px;
+                    height: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    cursor: pointer;
+                    span {
+                        display: block;
+                        height: 4px;
+                        background-color: #333;
+                        border-radius: 2px;
+                        transition: all 0.3s ease;
+                    }
+
+                }
+            }
+            &_top {
+                position: fixed;
+                background: #f2f2f2;
+                width: 100vw;
+                height: calc(100vh - 50px);
+                right: -110%;
+                top: 50px;
+                padding: 30px 20px;
+                border-top: 2px solid #fff;
+                transition: all 0.3s ease;
+                &_info {
+                    display: flex;
+                    justify-content: space-around;
+                    gap: 20px;
+                    &_social {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        gap: 20px;
+                        &_item {
+                            background-color: white;
+                            padding: 16px;
+                            border-radius: 50px;
+                            img {
+                                height: 30px;
+
+                            }
+                            &:hover {
+                                background-color: #c7ffee;
+                            }
+                        }
+                    }
+                    &_tel {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        justify-items: flex-start;
+                        &_phone {
+                            @include t700;
+                            font-size: 18px;
+                        }
+                        &_time {
+                            @include t400;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &_nav {
+                    margin-top: 10%;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-items: center;
+                    gap: 20px;
+                    &_item {
+                        @include t700;
+                        font-size: 26px;
+                        width: 80%;
+                        text-align: center;
+                        padding: 10px;
+                        background: #fff;
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+        .active {
+            span:nth-child(1) {
+                transform: translateY(10px) rotate(45deg);
+            }
+            span:nth-child(2) {
+                opacity: 0;
+            }
+            span:nth-child(3) {
+                transform: translateY(-10px) rotate(-45deg);
+            }
+            .header_mobile_top {
+                right: 0px;
+            }
+        }
+    }
+    .rtext {
+        display: none;
+    }
+    .title {
+        margin-top: 40px;
+        &_container {
+            grid-template-columns: 1fr;
+        }
+        &_photo {
+            img {
+                display: none;
+            }
+        }
+        &_main {
+            justify-items: right;
+        }
+        &_h1 {
+            font-size: 40px;
+        }
+        &_list_item {
+            font-size: 20px;
+        }
+    }
+    .shop {
+        margin-top: 20px;
+        &_container {
+            padding: 15px;
+        }
+        &_wrapper {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 20px;
+        }
+        &_title {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 20px;
+        }
+        &_item {
+            grid-template-rows: auto 1fr 1fr;
+            &_title {
+                &_h2 {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .benefits {
+        margin-top: 60px;
+        &_title {
+            font-size: 36px;
+            text-align: center;
+            &::after {
+                height: 20px;
+                bottom: 30px;
+            }
+        }
+        &_item {
+            grid-template-columns: 1fr !important;
+            gap: 20px;
+        }
+        &_item:nth-child(2n) .benefits_photo {
+            grid-column: 1/2;
+        }
+        &_item:nth-child(2n) .benefits_main {
+            grid-row: 2/3;
+        }
+        &_main_title::after {
+            height: 16px;
+            bottom: auto;
+            top: 16px;
+        }
+    }
+    .work {
+        margin-top: 40px;
+        &_title {
+            font-size: 40px;
+            text-align: center;
+        }
+        &_filter {
+            &_item {
+                font-size: 14px;
+            }
+        }
+        &_exmpl {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            &_item {
+                &_photo {
+                    height: 240px;
+                    width: 100%;
+                }
+            }
+        }
+        &_more {
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            padding: 30px 20px;
+        }
+    }
+    .form {
+        margin-top: 40px;
+        &_main {
+            grid-template-columns: 1fr;
+            &_input {
+                grid-column: 1/2;
+            }
+            &_box {
+                width: 70%;
+            }
+            &_submit {
+                grid-column: 1/2;
+                width: auto;
+            }
+        }
+    }
+    .news {
+        margin-top: 40px;
+        &_wrapper {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        &_item {
+            &_photo {
+                height: 240px;
+            }
+            &_date {
+                font-size: 16px;
+                margin-top: 14px;
+            }
+            &_title {
+                font-size: 20px;
+            }
+        }
+    }
+    .que {
+        margin-top: 40px;
+        &_wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+    .footer {
+        margin-top: 40px;
+        &_wrapper {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        &_menu {
+            display: none;
+        }
+        &_info {
+            text-align: center;
+        }
+    }
+}
+
+
+@media (max-width: 460px) {
+    .header {
+        &_mobile {
+            &_top {
+                &_info {
+                    display: grid;
+                    justify-content: center;
+                    &_social {
+                        justify-content: center;
+                        gap: 10px;
+                    }
+                    &_tel {
+                        justify-items: center;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        max-width: 95%;
+    }
+    .title {
+        &_main {
+            margin: 50px 0;
+        }
+    }
+    .shop {
+        &_container {
+            padding: 10px;
+        }
+        &_item {
+            padding: 24px 12px;
+            &_button {
+                grid-column: 1/4;
+                width: 100%;
+                &_btn {
+                    padding: 10px; 
+                }
+            }
+        }
+    }
+    .que {
+        &_wrapper {
+            padding:  20px 10px;
+        }
+        &_content {
+            &_item {
+                padding: 12px 6px;
+            }
+        }
+    }
+    .news {
+        padding: 16px;
+    }
+    .form {
+        &_wrapper {
+            padding: 16px;
+        }
+    }
+    .title {
+        &_button {
+            padding: 16px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+
 }

@@ -11,3 +11,12 @@ document.querySelectorAll('.que_content_item').forEach(item => {
     }
   });
 });
+
+
+
+
+let main = document.querySelector('.header_mobile_main_burger'),
+    dop = document.querySelector('.header_mobile');
+main.addEventListener('click', () => {
+  dop.classList.toggle('active');
+});
