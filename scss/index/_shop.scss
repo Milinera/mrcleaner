@@ -28,7 +28,7 @@
         display: grid;
         align-items: start;
         justify-items: start;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto 1fr 1fr;
         grid-template-rows: repeat(3,1fr);
         position: relative;
         transition: all 0.2s ease;
